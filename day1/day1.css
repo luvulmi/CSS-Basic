@@ -1,0 +1,15 @@
+body {
+    color: rgb(244, 87, 200);
+    text-align: center;
+}
+ol {
+    color: green;
+    text-align: left;
+}
+
+div {
+    font-size: 200%;
+}
+#childofdiv {
+    font-size: 50%;
+}
