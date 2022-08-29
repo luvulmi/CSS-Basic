@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css4-2 display(none), visibility(hidden, visible)</title>
+</head>
+<style>
+    /* 
+            이미지에 대한 크기는 width 나 height 중 하나만 변경 해도 원본
+            이미지에 맞추어 자동으로 다른 속성의 비율이 조정.
+        */
+
+    img[src="jeep.png"] {
+        width: 150px;
+
+        /* 
+                < display : none >
+
+            - 해당 요소가 컨텐트 영역을 차지하지 않으면서 숨김.
+            */
+        display: none;
+    }
+
+    h2:nth-of-type(1):hover+img {
+        display: inline-block;
+    }
+
+    img[src="star.jpg"] {
+        width: 200px;
+        /* 
+                < visibility >
+
+            - hidden : 해당 요소가 컨텐트 영역을 차지한 상태로 숨김.
+            
+            - visible : visibility 속성의 디폴트 값.
+
+            */
+        visibility: hidden;
+    }
+
+    h2:nth-of-type(2):hover+img {
+        visibility: visible;
+    }
+</style>
+
+<body>
+    <h1>display(none), visibility(hidden, visible)</h1>
+    <hr>
+
+    <h2>JEEP</h2>
+    <img src="jeep.png" alt="JEEP LOGO">
+    <p>Aute sint ea exercitation pariatur consequat. Officia et sunt tempor est minim anim officia exercitation enim
+        culpa. Nostrud adipisicing cillum esse adipisicing deserunt dolor. Laboris irure fugiat aute ad excepteur dolor.
+        Fugiat ex ad consectetur cillum pariatur dolore veniam sunt consequat nostrud sit irure anim. Culpa deserunt
+        exercitation tempor occaecat consequat amet est. Qui dolore sunt exercitation pariatur quis.</p>
+    <hr>
+
+    <h2>STARBUCKS</h2>
+    <img src="star.jpg" alt="STARBUCKS LOGO">
+    <p>Aute sint ea exercitation pariatur consequat. Officia et sunt tempor est minim anim officia exercitation enim
+        culpa. Nostrud adipisicing cillum esse adipisicing deserunt dolor. Laboris irure fugiat aute ad excepteur dolor.
+        Fugiat ex ad consectetur cillum pariatur dolore veniam sunt consequat nostrud sit irure anim. Culpa deserunt
+        exercitation tempor occaecat consequat amet est. Qui dolore sunt exercitation pariatur quis.</p>
+    <hr>
+
+</body>
+
+</html>

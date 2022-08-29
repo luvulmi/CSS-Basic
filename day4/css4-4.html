@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css4-4 overflow</title>
+
+    <style>
+        /* 
+      < overflow >
+
+    - 부모요소의 프레임 내에서 자식요소가 흘러 넘치는 경우에 대한 설정.
+
+    =======================================================================
+
+      < 1. visible >
+
+    - 부모요소에 대하여 자식요소가 흘러 넘쳐도 보이는 그대로 표시.
+      overflow 속성 미설정 시의 디폴트 값.
+    */
+
+        p {
+            background-color: antiquewhite;
+            border: 1px solid;
+            height: 80px;
+            margin-bottom: 200px;
+
+            /* 디폴트 값에 해당
+        overflow: visible; */
+        }
+
+        /* 
+      < 2. hidden >
+
+    - 부모요소에 대하여 자식요소가 흘러 넘쳐 표시되는 부분을 숨김.
+    */
+
+        p:nth-of-type(2) {
+            overflow: hidden;
+        }
+
+        p:nth-of-type(2):hover {
+            overflow: visible;
+        }
+
+        p:nth-of-type(n+3) {
+            width: 300px;
+        }
+
+        /* 
+      < white-space : nowrap >
+
+    - 텍스트는 기본적으로 지정된 컨텐트 너비 영역에 둘러싸이는 특성(normal)으로 인해
+      오른쪽 끝 영역에 닿으면 자동으로 개행되는 특성을 가지는데, 이러한 너비를 둘러
+      싸는 디폴트 속성을 해제하는 값이 nowrap.
+
+    */
+
+        p:nth-of-type(3) {
+            white-space: nowrap;
+        }
+
+        /* 
+      < overflow-x : hidden >
+
+    - 부모요소에 대하여 자식요소가 수평으로 흘러 넘쳐 표시되는 부분을 숨김.
+    */
+
+        p:nth-of-type(3):hover {
+            overflow-x: hidden;
+        }
+
+        /* 
+      < overflow-y : hidden >
+
+    - 부모요소에 대하여 자식요소가 수직으로 흘러 넘쳐 표시되는 부분을 숨김.
+    */
+
+        p:nth-of-type(4):hover {
+            overflow-y: hidden;
+        }
+
+        /* 
+      < scroll >
+
+    - 자식 요소가 부모의 수평 또는 수직 영역을 벗어나 흘러 넘치는 경우,
+      흘러 넘치는 방향에 상관없이 수평과 수직 모두에 대하여 스크롤 바 생성.
+    */
+
+        p:nth-of-type(5) {
+            overflow-y: hidden;
+            overflow: scroll;
+        }
+
+        /* 
+      < auto >
+
+    - 자식 요소가 부모의 수평 또는 수직 영역을 벗어나 흘러 넘치는 경우,
+      흘러 넘치는 방향에 대해서만 스크롤 바 생성. ( ex : 약관 )
+    */
+
+        p:nth-of-type(5):hover {
+            overflow: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Overflow</h1>
+    <hr>
+
+    <h2>1 - visible</h2>
+    <p>Sunt officia aliquip ipsum in laborum nisi magna minim eiusmod. Ullamco ea eu nulla amet qui sunt nostrud sunt
+        pariatur Lorem.Non occaecat minim veniam consequat irure excepteur ut exercitation et consequat. Officia
+        incididunt qui ipsum elit tempor adipisicing labore voluptate duis consequat consectetur. Elit non ea
+        consectetur magna incididunt consectetur incididunt est mollit cillum quis. Cillum sit veniam non sit quis. Ut
+        excepteur proident do consectetur eiusmod reprehenderit eiusmod adipisicing. Qui voluptate laborum reprehenderit
+        incididunt sit. Quis mollit eiusmod do velit sit anim cupidatat incididunt occaecat reprehenderit occaecat esse.
+        Officia non consectetur irure ad amet nisi exercitation non commodo fugiat commodo aliqua est reprehenderit.</p>
+
+    <h2>2 - hidden &amp; hover-visible</h2>
+    <p>Sunt officia aliquip ipsum in laborum nisi magna minim eiusmod. Ullamco ea eu nulla amet qui sunt nostrud sunt
+        pariatur Lorem. Quis mollit eiusmod doAmet ullamco tempor eiusmod qui. Voluptate reprehenderit irure anim culpa.
+        Laboris ea magna nostrud mollit eiusmod exercitation dolore ipsum velit in elit dolor tempor Lorem. Ex enim
+        cillum enim ullamco velit dolor eiusmod sint excepteur magna eiusmod in dolor. Occaecat sint consequat ut qui.
+        Aliqua dolor consequat sunt magna ipsum veniam culpa esse. Deserunt proident cillum est sunt laboris. velit sit
+        anim cupidatat incididunt occaecat reprehenderit occaecat esse.
+        Officia non consectetur irure ad amet nisi exercitation non commodo fugiat commodo aliqua est reprehenderit.</p>
+
+    <h2>3 - white-space(nowrap) &amp; overflow-x(hidden)</h2>
+    <p>Sunt officia aliquip ipsum in laborum nisi magna minim eiusmod. Ullamco ea eu nulla amet qui sunt nostrud sunt
+        pariatur Lorem. Quis mollit eiusmodAliquip culpa excepteur ut velit ipsum. Incididunt laboris nisi consectetur
+        elit proident culpa veniam. Officia et esse nulla aute labore. do velit sit anim cupidatat incididunt occaecat
+        reprehenderit occaecat esse.
+        Officia non consectetur irure ad amet nisi exercitation non commodo fugiat commodo aliqua est reprehenderit.</p>
+
+    <h2>4 - overflow-y(hidden)</h2>
+    <p>Sunt officia aliquip ipsum in laborum nisi magna minim eiusmod. Ullamco ea eu nulla amet qui sunt nostrud suntDo
+        exercitation nostrud voluptate id dolore deserunt proident fugiat. Eiusmod labore sint nulla elit exercitation
+        et. Occaecat duis pariatur duis excepteur ea magna excepteur do id Lorem aliqua ex cillum excepteur. Consequat
+        sint enim veniam voluptate excepteur id deserunt minim occaecat nulla. Occaecat anim elit veniam et elit
+        voluptate ullamco aliquip sit sunt reprehenderit non veniam tempor. Voluptate quis tempor Lorem cupidatat
+        occaecat. Nulla incididunt reprehenderit deserunt incididunt pariatur ea in laborum.
+        pariatur Lorem. Quis mollit eiusmod do velit sit anim cupidatat incididunt occaecat reprehenderit occaecat esse.
+        Officia non consectetur irure ad amet nisi exercitation non commodo fugiat commodo aliqua est reprehenderit.</p>
+
+
+    <h2>5 - overflow(scroll, auto)</h2>
+    <p>Sunt officia aliquip ipsum in laborum nisi magna minim eiusmod. Ullamco ea eu nulla amet qui sunt nostrud sunt
+        pariatur Lorem. Sint do enim reprehenderit consequat eiusmod consequat ut in exercitation occaecat proident.
+        Aliquip reprehenderit culpa aute aliqua commodo ex. Consequat officia labore veniam cillum sit.Quis mollit
+        eiusmod do velit sit anim cupidatat incididunt occaecat reprehenderit occaecat esse.
+        Officia non consectetur irure ad amet nisi exercitation non commodo fugiat commodo aliqua est reprehenderit.</p>
+</body>
+
+</html>

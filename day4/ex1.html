@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제1</title>
+</head>
+
+<!-- 너비에 따라 변화
+셀의 너비와 높이는 항상 동일 -->
+
+<style>
+    * {
+        margin: 0;
+    }
+
+    figcaption {
+        font-size: 1vw;
+    }
+
+    col {
+        width: 5vw;
+    }
+
+
+    tr {
+        height: 5vw;
+    }
+
+    td {
+        background-color: darkcyan;
+    }
+
+    /* td에 기본값으로 padding이 들어가므로 col,tr에다 vw 지정 */
+
+    tr:nth-of-type(odd) td:nth-child(odd),
+    tr:nth-of-type(even) td:nth-child(even) {
+        opacity: 0.2;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    /* < border-collapse > 
+     - collapse :테이블 간격을 없애서 경계 통합
+     - separate는 디폴트 값
+    */
+
+</style>
+
+<body>
+    <figure>
+        <figcaption>테이블 꾸미기</figcaption>
+
+        <table>
+            <colgroup>
+                <col span="10">
+            </colgroup>
+            <!-- 테이블 안에 꼭 넣기!
+                 col은 span으로 길이지정 해주기 -->
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+
+        </table>
+    </figure>
+
+</body>
+
+</html>

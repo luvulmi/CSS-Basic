@@ -1,0 +1,25 @@
+div {
+    margin-top: 1px;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    height: 500px;
+}
+
+div a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 30px;
+    line-height: 30px;
+    background-color: grey;
+    color: black;
+}
+
+div a:not([href="#"]) {
+    opacity: 0.4;
+}
+
+/* 외부스타일시트 */

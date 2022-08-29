@@ -1,0 +1,22 @@
+img {
+    width: 300px;
+    height: 300px;
+    display: none;
+    margin: 7em;
+}
+
+li {
+    text-align: center;
+    width: 7em;
+    line-height: 5em;
+    background-color: skyblue;
+    color: #ffffff;
+}
+
+span:hover+img {
+    display: block;
+}
+
+li:not(:hover) {
+    opacity: 0.6;
+}
