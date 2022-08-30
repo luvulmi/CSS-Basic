@@ -1,0 +1,30 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../day4/2-5.jpg);
+    text-align: center;
+
+}
+
+body span {
+
+    width: 100px;
+    height: 100px;
+    color: blueviolet;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+p {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    background: url(../day4/2-4.jpg) no-repeat center center/cover;
+    overflow: auto;
+    color: green;
+    font-size: .8em;
+    white-space: pre;
+    font-weight: bold;
+    opacity: 0.8;
+    vertical-align: middle;
+}
