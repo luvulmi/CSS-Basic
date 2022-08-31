@@ -1,0 +1,47 @@
+.parentbox {
+    background-color: antiquewhite;
+    width: 400px;
+    height: 300px;
+    border: solid 1px;
+}
+
+.childbox {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+/* 1. 인라인 요소의 수평-수직 정렬 */
+
+.p1box {
+    text-align: center;
+    line-height: 300px;
+}
+
+.p1box div {
+    display: inline-block;
+    vertical-align: middle;
+    /* 수평은 text-align으로 맞추었으나 수직 가운데로 하려면 vertical-align 필요 */
+}
+
+/* 2. 마진을 활용한 블럭 요소의 수평-수직 정렬 */
+
+.p2box div {
+    /* 
+      블럭요소의 수평 중앙 정렬은 좌우 마진에 대하여 auto 값 적용.
+      수직은 마진값 적용 xx.
+   */
+    margin: 0 auto;
+}
+
+.p2box:hover div {
+    /* 
+      블럭요소의 수직 중앙 정렬은 auto 값 적용이 되지 않아
+      부모요소의 높이에 대하여 자식요소의 높이를 뺀 나머지를
+      상/하 이등분하여 분배함으로써 수직 중앙 정렬 가능.
+
+      400px - 100px = 200px / 2 = 100px
+   */
+
+   margin: 100px auto;
+}
