@@ -1,0 +1,33 @@
+/* 모범답안 */
+
+body{
+    margin: 0;
+    background: url(../day4/2-5.jpg) center/cover;
+    font-size: .8em;
+    text-align: center;
+    line-height: 100vh;
+}
+
+/* p 태그 내에는 다른 블럭 요소가 포함되지 않음 주의 */
+span{
+    font: bold 1.5em normal;
+    color: darkorchid;
+}
+
+body>p {
+    background : url(../day4/2-4.jpg) 0 0/100% 100%;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+
+    color: green;
+    vertical-align: middle;
+    line-height: initial;
+    white-space:pre-line;
+    overflow: auto;
+
+    opacity: .8;
+}
+
+
+
