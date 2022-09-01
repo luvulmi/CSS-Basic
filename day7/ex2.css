@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header,
+main,
+footer {
+    margin: auto;
+    width: calc(1024px * 0.8);
+}
+
+header {
+    background-color: blanchedalmond;
+    line-height: 20vh;
+}
+
+/* main {
+    background-color:aqua;
+    height: 60vh;
+} */
+
+footer {
+    background-color: blanchedalmond;
+    line-height: 20vh;
+}
+
+/* ============================================================= */
+/* main frame */
+
+/* #section_article,
+main aside {
+    /* display: inline-block; */
+    /* float : left;
+} */
+
+#section_article {
+    width: 70%;
+    float: left;
+}
+
+#section_article section {
+    background-color: gray;
+    line-height: calc(60vh * 0.6);
+}
+
+#section_article article {
+    background-color:cadetblue;
+    line-height: calc(60vh * 0.4);
+}
+
+main aside {
+    float: left;
+    width: 30%;
+    line-height: 60vh;
+    background-color: burlywood;
+
+}
+
+

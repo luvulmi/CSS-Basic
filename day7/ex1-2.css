@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+/* ======================================================== */
+/* 조건 1)에 해당 */
+header,
+main,
+footer {
+    margin: auto;
+    width: calc(1024px * 0.8);
+}
+
+header {
+    /* background-color:palevioletred; */
+    height: 20vh;
+}
+
+main {
+    /* background-color:antiquewhite; */
+    height: 60vh;
+}
+
+footer {
+    background-color: blanchedalmond;
+    line-height: 20vh;
+}
+
+#section_article,
+main aside,
+header h1,
+header h1 a,
+nav,
+nav li,
+nav li a {
+    display: inline-block;
+}
+
+header h1,
+header nav li a {
+    text-indent: -9999em;
+}
+
+/* ======================================================== */
+/* header frame */
+
+header h1 {
+    background: url(../day4/star.jpg) no-repeat center/100%;
+    width: 150px;
+    height: 150px;
+    /* margin: 0 20px; */
+}
+
+header nav li a {
+    background: url(ex1.jpg) -3px -3px;
+    width: 108px;
+    height: 38px;
+    margin-left: 20px;
+}
+
+nav li:nth-child(2) a {
+    background-position: calc(-109px + -3px) -3px;
+}
+
+nav li:nth-child(3) a {
+    background-position: calc(-109px * 2 - 3px - 1px) -3px;
+}
+
+nav li:nth-child(4) a {
+    background-position: calc(-109px * 3 - 3px - 2px) -3px;
+}
+
+nav li a:hover {
+    background-position: -3px calc(-38px + -4px);
+}
+
+nav li:nth-child(2) a:hover {
+    background-position: calc(-109px + -3px) calc(-38px + -4px);
+}
+
+nav li:nth-child(3) a:hover {
+    background-position: calc(-109px * 2 - 3px - 1px) calc(-38px + -4px);
+}
+
+nav li:nth-child(4) a:hover {
+    background-position: calc(-109px * 3 - 3px - 2px) calc(-38px + -4px);
+}
+
+header h1 {
+    margin: calc((20vh - 150px)/2) 20px;
+}
+
+header nav {
+    margin: calc((20vh - 38px)/2) 0px;
+    vertical-align: top;
+}
+
+
+/* ============================================================ */
+/* main frame */
+
+#section_article {
+    width: 70%;
+}
+
+#section_article section {
+    line-height: calc(60vh * 0.6);
+    background-color: gray;
+}
+
+#section_article article {
+    line-height: calc(60vh * 0.4);
+    background-color:cadetblue;
+}
+
+aside {
+    width: 30%;
+    line-height: 60vh;
+    background-color: burlywood;
+    margin-left: -6px;
+/* 왼쪽에다 붙여야되므로 */
+
+    vertical-align: top;
+}
