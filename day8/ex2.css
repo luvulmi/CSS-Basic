@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    /* text-align: center; */
+}
+
+/* ============================================================================ */
+.container {
+    background-color: antiquewhite;
+    width: 700px;
+    height: 150px;
+    margin: auto;
+}
+
+/* 원만들기 */
+.container li {
+    background-color: skyblue;
+    border: solid 1px black;
+    border-radius: 50%;
+    text-align: center;
+    /* 문제 조건 */
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    line-height: 48px;
+    /* line-height = height - (border * 2) */
+
+    /* border를 요소 안쪽으로 포함하게 지정.
+    이 경우 요소의 line-height와 height 각각 지정해야함. */
+
+    margin: 5px;
+}
+
+.leftBox,
+.rightBox {
+    background-color: burlywood;
+    margin: calc((150px - 115px)/2);
+    /* 수직 중앙 정렬 : (container height - leftbox height)/2 */
+}
+
+/* ============================================================================ */
+/* leftBox */
+
+.leftBox {
+    width: 115px;
+    /* height: 115px; */
+    float: left;
+}
+
+.leftBox li {
+    float: right;
+}
+
+/* li는 인라인 요소이므로 마진 공유 불가능!!!
+겹치는 마진 영역 한 부분을 0px로 잡아주어야함. */
+
+.leftBox :nth-child(-n+2) {
+    margin-bottom: 0px;
+}
+
+.leftBox li:nth-child(odd) {
+    margin-left: 0px;
+}
+
+/* ============================================================================ */
+/* rightBox */
+
+.rightBox {
+    /* width: 225px; */
+    /* height: 60px; */
+    float: right;
+    margin-top: calc((150px - 115px)/2 + 55px);
+    /* rightbox 마진 + li 높이 + li 마진 */
+
+    /* margin-top: calc((150px - 60px) - (150px - 115px)/2) */
+    /* (container 높이 - rightbox 높이) - rightbox 마진  */
+}
+
+.rightBox li {
+    float: left;
+}
+
+.rightBox :not(:nth-child(1)) {
+    margin-left: 0px;
+}
