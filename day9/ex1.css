@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 5vh;
+    height: 5vh;
+    position: fixed;
+    top: calc((100vh - 5vh)/2);
+    left: calc((100% - 5vh)/2);
+
+
+    /* margin: calc((100vh - 5vh)/2) calc((100% - 5vh)/2); */
+    /* 유지보수 위해 코드는 최대한 간소화  */
+
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.top,
+.left,
+.right {
+    /* width: 15vh;
+    height: 15vh; */
+    position: absolute;
+    width: calc(5vh * 5);
+    height: calc(5vh * 5);
+    line-height: calc(5vh * 5);;
+    overflow: hidden;
+    text-align: center;
+    font-family: '휴먼옛체';
+
+}
+
+.top {
+    background-color: blue;
+    color: white;
+    bottom: 0;
+    /* 컨테이너를 기준으로 밑으로 붙어야함 */
+
+    left: calc((100% - 5vh * 5)/2);
+    z-index: 2;
+    /* transform: translate(-50%); */
+}
+
+.left {
+    background-color: greenyellow;
+    right: 0;
+}
+
+.right {
+    background-color: magenta;
+    color: white;
+    left: 0;
+    z-index: 3;
+}
+
+.container div:hover {
+    z-index: 4;
+}
+
+.container .right:hover {
+    z-index: -1;
+}
