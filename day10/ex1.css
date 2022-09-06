@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 코딩할 때 분류해서 하기 > 순서 잘 잡기
+    이미지 크기를 먼저 잡고 컨테이너 잡기 */
+
+.img {
+    background: url(2-1.jpg) 0/100% 100%;
+    /* 100% 100% 면 no-repeat 안 걸어도됨 */
+
+    box-sizing: border-box;
+    width: 400px;
+    height: 500px;
+    border: 1px solid;
+}
+
+.container {
+    position: relative;
+    /* fixed 나 absolute를 걸면 크기가 사라지므로 relative !!! */
+
+    margin: calc((100vh - 500px)/2) calc((100% - 400px)/2);
+    /* 블록 요소이므로 수직은 높이로 수평은 100%로 잡아주기 */
+}
+
+.button {
+    background-color: cadetblue;
+    line-height: 30px;
+    padding: 0 10px;
+    position: absolute;
+    top: calc((100% - 30px)/2);
+}
+
+.pre {
+    right: calc(100% + 20px);
+}
+
+.next {
+    left: calc(100% + 20px);
+}
