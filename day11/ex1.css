@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header,
+section {
+    width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: black;
+}
+
+/* menu */
+nav>ul>li {
+    position: relative;
+    width: 25%;
+    float: left;
+    color: antiquewhite;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* relative 공간을 잡아먹음
+    absolute 공간을 잡아먹지 않음. */
+
+nav>ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* sub menu */
+nav ul ul {
+    background-color: cadetblue;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+}
+
+nav ul ul li {
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+section p {
+    padding: 20px 0;
+    text-align: justify;
+    word-break: break-all;
+}
+
+header ul>li:hover ul {
+    display: block;
+}

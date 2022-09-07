@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header, main {
+    width: 600px;
+    margin: 0 auto;
+}
+
+main p {
+    text-align: justify;
+    word-break: break-all;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+/* ====================================================== */
+
+header nav>ul {
+    background-color: darkslategrey;
+    color: white;
+}
+
+header nav>ul::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+header nav li {
+    box-sizing: border-box;
+    padding: 0 20px;
+    /* padding을 포함한 너비를 잡아야 하므로 보더박스 사이징 지정해야함 */
+}
+
+header nav>ul>li {
+    float: left;
+    line-height: 40px;
+    width: 25%;
+    /* li가 총 4개이므로 25% */
+    
+    position: relative;
+    /* relative 공간을 잡아먹음
+    absolute 공간을 잡아먹지 않음. */
+}
+
+header nav ul ul {
+    display: none;
+    background-color: cadetblue;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+header nav ul ul li {
+    font-size: .8em;
+}
+
+header nav>ul>li:hover ul {
+    display: block;
+}
