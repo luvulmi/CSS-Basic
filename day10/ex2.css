@@ -19,6 +19,7 @@ header {
 main {
     height: calc(100vh * 0.6);
     position: relative;
+    /* main을 기준으로 포지션 지정. */
 }
 
 footer {
@@ -31,44 +32,66 @@ footer {
 
 #section_article {
     width: 70%;
-    position: absolute;
 }
 
-section,
-article,
-h2 {
-    position: relative;
+#section_article section {
+    height: calc(60vh * .6);
+}
+
+#section_article article {
+    height: calc(60vh * .4);
 }
 
 #section_article section h2 {
     background-color: gray;
-    line-height: calc(100vh * 0.6 * 0.6);
+    line-height: calc(60vh * .6);
+    /* line-height애는 100%쓰면 폰트사이즈로 적용되므로 vh단위로 작성.*/
 }
 
 #section_article article h2 {
     background-color: cadetblue;
-    line-height: calc(100vh * 0.6 * 0.4);
+    line-height: calc(60vh * .4);
+}
+
+main aside {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 main aside h2 {
-    width: 30%;
-    line-height: calc(100vh * 0.6);
+    line-height: 60vh;
     background-color: burlywood;
-    left: 70%;
 }
+
+
+/* ============================================================= */
+/* hover 설명이 필요해요? */
 
 #section_article section:hover h2 {
-    top: calc(((100vh * 0.6) - (60vh * 0.6))/2);
-    left: calc(((100%/7)*10 - 100%)/2);
+    position: relative;
+    left: calc((100% / 7 * 3)/2);
+    /* 전체너비 - 자기자신 / 2 
+    상대요소 너비 / 2 
+    -> 가운데로 이동 가능!!! */
+    
+    /* 자기자신 width 100% / 7 = 10분의 1값 * 3 해야 상대비율 / 2 해서 수평정렬 */
+    top: calc((100% / 6 * 4)/2);
+    /* 블록요소는 높이는 지정이 안되므로 section 높이 지정 후 100%로 계산
+    지정이 안되어 있으면 % 사용불가 */
     z-index: 1;
 }
+/* section 호버했을 때 h2가 이동되어야 날뛰지않음 */
 
 #section_article article:hover h2 {
-    bottom: calc(((100vh * 0.6) -(60vh * 0.4))/2);
-    left: calc(((100%/7)*10 - 100%)/2);
+    position: relative;
+    left: calc((100% / 7 * 3)/2);
+    top: calc((100% / 4 * 6)/2);
     z-index: 1;
 }
 
 main aside:hover h2 {
+    position: relative;
     left: 100%;
 }

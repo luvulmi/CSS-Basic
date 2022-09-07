@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header,
+main,
+footer {
+    margin: auto;
+    width: calc(1024px * .8)
+}
+
+header,
+footer {
+    line-height: calc(100vh * .2);
+}
+
+main {
+    height: calc(100vh * .6);
+    position: relative;
+}
+
+header {
+    background-color: yellow;
+}
+
+footer {
+    background-color: antiquewhite;
+}
+
+/* =================================================================== */
+
+#section_article {
+    width: 70%;
+}
+
+#section_article section {
+    height: calc(60vh * .6);
+}
+
+#section_article article {
+    height: calc(60vh * .4);
+}
+
+#section_article section h2 {
+    background-color: magenta;
+    line-height: calc(60vh * .6);
+}
+
+#section_article article h2 {
+    background-color: violet;
+    line-height: calc(60vh * .4);
+}
+
+main aside {
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+/* 호버 시 공간이 그대로 있어야 밀리지 않으므로 앱솔로 고정!!! */
+
+main aside h2 {
+    line-height: 60vh;
+    background-color: burlywood;
+}
+
+/* 호버 시 움직일 요소 */
+/* ================================================================== */
+
+#section_article section:hover h2 {
+    position: relative;
+    left: calc((100% / 7 * 3)/2);
+    top: calc((100% / 6 * 4)/2);
+    z-index: 1;
+}
+
+#section_article article:hover h2 {
+    position: relative;
+    left: calc((100% / 7 * 3)/2);
+    bottom: calc((100% / 4 * 6)/2);
+    z-index: 1;
+}
+
+main aside:hover h2 {
+    position: relative;
+    left: 100%;
+}
