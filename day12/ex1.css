@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color:deeppink;
+    width: 430px;
+    height: 430px;
+
+    display: flex;
+    flex-flow: column-reverse wrap-reverse;
+    justify-content: space-between;
+    /* 주축 정렬 */
+    align-content: space-between;
+    /* 다중 주축 정렬 */
+}
+
+/* 
+< flex-flow >
+
+- flex-direction 과 flex-wrap 을 순서대로 지정하여 동시 설정.
+*/
+
+.container div {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    /* 기본값은 수평 정렬! > column으로 바뀌면 수직 정렬 */
+    align-items: center;
+    /* 기본값은 수직 정렬! > column으로 바뀌면 수평 정렬 */  
+    /* -> 두개 같이 쓰면 중앙 정렬!! */
+    text-shadow: 5px 5px rgba(245, 245, 220, 0.473);
+}

@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner::before {
+    content: "";
+    width: 700px;
+    height: 150px;
+    background: url(../day4/2-5.jpg) no-repeat 0/100%;
+    border: 2px solid;
+    opacity: 0.3;
+    
+    position: absolute;
+}
+
+.banner {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner div {
+    color: darkgreen;
+    text-decoration: bold;
+    font-size: 100px;
+    letter-spacing: 20px;
+}
