@@ -1,0 +1,52 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+header, main {
+    width: 600px;
+}
+
+header nav>ul {
+    background-color: darkgreen;
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    /* 채워야 할 곳에 디플걸기 */
+}
+
+header nav>ul>li {
+    flex: 1;
+    /* 채워야할 요소에 플렉스 1 > 1:1비율로 걸린다는 뜻 */
+    line-height: 40px;
+    padding: 0 20px;
+
+    position: relative;
+}
+
+header nav>ul ul {
+    background-color: cadetblue;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+
+header nav>ul ul>li {
+    padding: 0 20px;
+    font-size: .8em;
+}
+
+/* ========================================================== */
+header nav li:hover ul {
+    display: block;
+}
+
+main p {
+    padding: 20px 0;
+    text-align: justify;
+    word-break: break-all;
+}
+

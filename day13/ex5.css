@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    row-gap: 1px;
+}
+
+.container>div {
+    display: grid;
+    grid-template: 1fr / repeat(10, 1fr);
+    column-gap: 1px;
+}
+
+/* 홀수 열 홀수 행 opa1
+    짝수 행 짝수 열  
+    
+    홀수 행 짝수 열
+    짝수 행 홀수 열 opa.4*/
+
+.container>div>div {
+    background-color: cadetblue;
+}
+
+.container>div:nth-of-type(odd)>div:nth-child(even),
+.container>div:nth-of-type(even)>div:nth-child(odd) {
+    opacity: .7;
+}

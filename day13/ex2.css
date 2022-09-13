@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, main, footer {
+    width: calc(1024px * 0.8);
+    margin: auto;
+    display: flex;
+}
+
+header, footer {
+    background-color: blanchedalmond;
+    flex: 2;
+}
+
+main {
+    flex: 6;
+}
+
+header, footer, main h2 {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==============================main================================== */
+#section_article, 
+#section_article section, 
+#section_article article,
+main aside {
+    display: flex;
+}
+
+#section_article {
+    flex: 7;
+    flex-direction: column;
+}
+
+#section_article section {
+    flex: 6;
+}
+
+#section_article article {
+    flex: 4;
+}
+
+#section_article section h2 {
+    background-color: darkgrey;
+}
+
+#section_article article h2 {
+    background-color: cadetblue;
+}
+
+main aside h2 {
+    background-color: burlywood;
+}
+
+main aside {
+    flex: 3;
+}
+
+/* ==============================hover================================ */
+
+#section_article section:hover h2 {
+    position: relative;
+    left: calc((100% / 7 * 3)/2);
+    top: calc((100% / 6 * 4)/2);
+    z-index: 1;
+}
+
+#section_article article:hover h2 {
+    position: relative;
+    left: calc((100% / 7 * 3)/2);
+    bottom: calc((100% / 4 * 6)/2);
+    z-index: 1;
+}
+
+main aside:hover h2 {
+    position: relative;
+    left: 100%;
+}
