@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    background-color: blueviolet;
+    grid-area: logo;
+}
+
+.menu {
+    background-color:greenyellow;
+    grid-area: menu;
+}
+
+.contents {
+    background-color: orange;
+    grid-area: contents;
+}
+
+.aside {
+    background-color: cadetblue;
+    grid-area: aside;
+}
+
+.footer { 
+    background-color: palevioletred;
+    grid-area: footer;
+}
+
+#grid_container {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 3fr 1fr / 1fr 1fr .5fr .5fr;
+    /* .5fr이 가능!! */
+
+    grid-template-areas:
+    "logo menu . ."
+    "contents contents aside aside"
+    ". footer footer .";
+    /* 행은 ""로 구분 띄어쓰기는 열로 구분 .은 공백인 셀*/
+}
+
+#grid_container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
